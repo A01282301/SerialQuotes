@@ -1,0 +1,227 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar, .results::-webkit-scrollbar{
+    display: none;
+}
+
+.menubar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #5b5b5b;
+    color: white;
+    height: 60px;
+}
+
+.title{
+    display: flex;
+    font-size: 50px;
+    height: 60px;
+}
+
+.account{
+    padding: 0px 10px 10px 10px;
+    padding-top: 100%;
+    background-color: #212121;
+    border-bottom-left-radius: 10px;
+}
+
+.indexPage{
+    padding: 0px 10px 10px 10px;
+    padding-top: 100%;
+    background-color: #212121;
+    border-bottom-right-radius: 10px;
+}
+
+.menubar > label:hover{
+    cursor: pointer;
+    background-color: rgb(168, 82, 82);
+}
+
+.serialPage:hover{
+    cursor: pointer;
+    background-color: #212121;
+    border-bottom-left-radius: 10px;
+}
+
+.quotePage:hover{
+    cursor: pointer;
+    background-color: #212121;
+    border-bottom-right-radius: 10px;
+}
+
+.results{
+    height: 100%;
+    background-color: beige;
+    overflow: overlay;
+    -ms-overflow-style: none;
+    padding-bottom: 20px;
+}
+
+.results > div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #5b5b5b;
+}
+
+.results > div:hover{
+    background-color: rgb(244,238,177);
+    border-radius: 10px;
+}
+
+.results > .administrator{
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #5b5b5b;
+}
+
+.results > .administrator:hover{
+    background-color: rgb(244,238,177);
+    border-radius: 10px;
+}
+
+.results > div > label, .subtitle{
+    font-size: larger;
+    padding: 2px;
+}
+
+.results > div > div, .administrator > div{
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(244,238,177);
+    border-radius: 10px;
+}
+
+.administrator > div > div{
+    padding: 10px;
+}
+
+.administrator > div > div > div{
+    padding: 10px;
+    background-color: #5b5b5b;
+    border-radius: 10px;
+    color: white;
+}
+
+.administrator > div > div:hover{
+    background-color: #5b5b5b;
+}
+
+.user-username{
+    display: flex;
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.new-username, .new-password{
+    display: none;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.error{
+    font-weight: bold;
+    align-self: center;
+}
+
+.subtitle:hover, .element:hover{
+    cursor: pointer;
+}
+
+.edit-user{
+    display: flex;
+    place-content: space-evenly;
+}
+
+.element{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.element-label{
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 128, 128);
+    border-radius: 10px;
+    border: outset;
+}
+
+.element-label:hover{
+    cursor: pointer;
+    border: inset;
+    background-color: rgb(168, 82, 82);
+}
+
+#show{
+    display: flex;
+}
+
+#hide{
+    display: none;
+}
+
+.create-tv{
+    border: solid;
+    margin: 20px;
+    width: 650px;
+}
+
+.create-tv > label{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+}
+
+.create-tv > div > label{
+    width: 90px;
+}
+
+.create-tv > div{
+    display: flex;
+    margin: 5px;
+}
+
+.create-tv > div > input, .create-tv > div > select, .create-tv > div > button{
+    flex: 1;
+}
+
+.delete-everything{
+    height: 30px;
+    margin: 10px;
+}
+
+.edit-input{
+    display: none;
+}
+
+footer{
+    display: flex;
+    background-color: #5b5b5b;
+    color: white;
+    justify-content: space-around;
+    padding: 2px 0px 5px 0px;
+}
+
+li{
+    list-style: none;
+    padding: 0px 15px 0px 15px;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: #212121;
+    border-radius: 10px;
+}

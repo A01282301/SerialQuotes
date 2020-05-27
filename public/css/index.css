@@ -1,0 +1,275 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar, .news::-webkit-scrollbar, .serial-results::-webkit-scrollbar, .quotes-results::-webkit-scrollbar{
+    display: none;
+}
+
+.menubar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #5b5b5b;
+    color: white;
+    height: 60px;
+}
+
+.title{
+    display: flex;
+    font-size: 50px;
+    height: 60px;
+}
+
+.account{
+    padding: 0px 10px 10px 10px;
+    padding-top: 100%;
+    background-color: #212121;
+    border-bottom-left-radius: 10px;
+}
+
+.indexPage{
+    padding: 0px 10px 10px 10px;
+    padding-top: 100%;
+    background-color: #212121;
+    border-bottom-right-radius: 10px;
+}
+
+.menubar > label:hover{
+    cursor: pointer;
+    background-color: rgb(168, 82, 82);
+}
+
+.serialPage:hover{
+    cursor: pointer;
+    background-color: #212121;
+    border-bottom-left-radius: 10px;
+}
+
+.quotePage:hover{
+    cursor: pointer;
+    background-color: #212121;
+    border-bottom-right-radius: 10px;
+}
+
+.news{
+    display: flex;
+    flex-direction: row;
+    overflow: overlay;
+    -ms-overflow-style: none;
+    background-color: #5b5b5b;
+}
+
+.news-new{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    width: 160px;
+    margin: 10px;
+    border: outset;
+    background-color: rgb(244,238,177);
+    border-radius: 10px;
+}
+
+.news-new:hover{
+    cursor: pointer;
+    border: inset;
+    background-color: rgb(255, 128, 128);
+}
+
+.news-new > label:hover{
+    cursor: pointer;
+}
+
+.news-new > .news-new-title{
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.news-new > label{
+    overflow: hidden;
+    width: 160px;
+    text-overflow: ellipsis;
+    font-size: smaller;
+}
+
+.results{
+    display: flex;
+    height: 100%;
+}
+
+.serial{
+    flex: 4;
+    background-color: beige;
+}
+
+.serial-submenu, .quotes-submenu{
+    display: flex;
+    justify-content: space-around;
+    height: 24px;
+    background-color: #5b5b5b;
+    color: blanchedalmond;
+}
+
+.serial-filter{
+    display: flex;
+}
+
+.serial-filter > label:hover, .serial-filter > input:hover, #serial-search:hover{
+    cursor: pointer;
+}
+
+.serial-results{
+    display: flex;
+    flex-wrap: wrap;
+    height: 95%;
+    overflow: overlay;
+    padding-right: 10px;
+    justify-content: space-around;
+    -ms-overflow-style: none;
+}
+
+.tv{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 200px;
+    height: 295px;
+    border-style: outset;
+    background-color: white;
+    padding: 5px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.tv-title, .tv-description, .tv-type{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 2px;
+}
+
+.tv-title{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#add-wish, #add-like, #add-watch, #like-add{
+    background-size: 100%;
+    height: 20px;
+    width: 20px;
+    align-self: flex-end;
+}
+
+#add-wish{
+    background-image: url('https://cdn.pixabay.com/photo/2014/04/02/10/41/button-304224_960_720.png');
+    border-radius: 20px;
+}
+
+#add-watch{
+    background-image: url('https://cdn.pixabay.com/photo/2015/06/09/16/12/icon-803718_960_720.png');
+    border-radius: 20px;
+}
+
+#add-like{
+    background-image: url('https://img.icons8.com/carbon-copy/100/000000/filled-like.png');
+}
+
+#like-add{
+    background-image: url('https://i.imgur.com/e1xbhVr.png');
+}
+
+.quotes{
+    flex: 1;
+    background-color: beige;
+}
+
+.quotes-results{
+    overflow: overlay;
+    height: 95%;
+    -ms-overflow-style: none;
+}
+
+.quote{
+    margin: 10px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    border-style: outset;
+    background-size: 100%;
+    border-radius: 10px;
+    background-color: rgb(255, 128, 128);
+}
+
+.tv > button:hover, .tv > label:hover, .quote > div > label:hover, .quote-date:hover, #add-like:hover, #like-add:hover{
+    cursor: pointer;
+}
+
+.tv:hover, .quote:hover{
+    border-style: inset;
+    cursor: pointer;
+    background-color: rgb(244,238,177);
+}
+
+.quote-quote-label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote-quote{
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: -webkit-center;
+}
+
+.quote-from-label, .quote-by-label{
+    display: flex;
+}
+
+.quote-from, .quote-by{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 3px;
+}
+
+.like-date{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer{
+    display: flex;
+    background-color: #5b5b5b;
+    color: white;
+    justify-content: space-around;
+    padding: 2px 0px 5px 0px;
+}
+
+li{
+    list-style: none;
+    padding: 0px 15px 0px 15px;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: #212121;
+    border-radius: 10px;
+}
+
+a{
+    color: white;
+}

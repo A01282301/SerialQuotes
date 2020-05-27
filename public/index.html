@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width">
+        <title>SerialQuotes</title>
+        <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <section class="menubar">
+            <label class="indexPage">Home</label>
+            <div class="title">
+                <label class="serialPage">Serial</label>
+                <label class="quotePage">Quotes</label>
+            </div>
+            <label class="account">Log In</label>
+        </section>
+        <section class="news"></section>
+        <section class="results">
+            <div class="serial">
+                <div class="serial-submenu">
+                    <label>Serial</label>
+                    <div class="serial-filter">
+                        <input type="radio" id="filter1" name="filter" value="all" checked=true>
+                        <label>All</label>
+                        <input type="radio" id="filter2" name="filter" value="movies">
+                        <label>Movies</label>
+                        <input type="radio" id="filter3" name="filter" value="series">
+                        <label>Series</label>
+                    </div>
+                    <div>
+                        <input type="text" class="serial-search" placeholder="Look for a title"> 
+                        <button id="serial-search">Search</button>
+                    </div>
+                </div>
+                <section class="serial-results"></section>
+            </div>
+            <div class="quotes">
+                <div class="quotes-submenu">
+                    <label>Quotes</label>
+                </div>
+                <section class="quotes-results"></section>
+            </div>
+        </section>
+        <footer>
+            <div class="mapPage">
+                <label>Quick Links</label>
+                <li go="serial">Series and Movies</li>
+                <li go="quotes">Quotes</li>
+            </div>
+            <div class="aboutUs">
+                <label>About Us</label>
+                <li go="develop">Development</li>
+                <li go="contact">Contact Us</li>
+                <a href="https://icons8.com/icon/JsPUAjDVwwQd/me-gusta-relleno">Me gusta relleno icon by Icons8</a>
+            </div>
+            <div class="information">
+                <label>Information</label>
+                <li go="api">Our API</li>
+                <li go="use">How to use our webpage</li>
+            </div>
+            <script src="./js/index.js"></script>
+        </footer>
+    </body>
+</html>

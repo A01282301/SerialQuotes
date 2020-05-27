@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width">
+        <title>Log In</title>
+        <link href="./css/login.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <section class="menubar">
+            <label class="indexPage">Home</label>
+            <div class="title">
+                <label class="serialPage">Serial</label>
+                <label class="quotePage">Quotes</label>
+            </div>
+            <label class="account">Log In</label>
+        </section>
+        <section class="results">
+            <div class="login">
+                <label class="login-title">Log In</label>
+                <div class="signup-btn-label">
+                    <label>No account?</label>
+                    <label class="signup-btn">Sign Up</label>
+                </div>
+                <label class="login-error">Invalid username and/or password</label>
+                <div class="login-user-pass">
+                    <div class="login-username-label">
+                        <label>Username: </label>
+                        <input type="text" id="login-username">
+                    </div>
+                    <div class="login-password-label">
+                        <label>PasswordL </label>
+                        <input type="password" id="login-password">
+                    </div>
+                    <button id="login-btn">Log In</button>
+                </div>
+            </div>
+            <div class="signup">
+                <label class="signup-title">Sign Up</label>
+                <div class="login-btn-label">
+                    <label>Do you have an account?</label>
+                    <label class="login-btn">Log In</label>
+                </div>
+                <label class="signup-error-user">The username already exist</label>
+                <div class="signup-user-pass">
+                    <div class="signup-username-label">
+                        <label>Username: </label>
+                        <input type="text" id="signup-username">
+                    </div>
+                    <div class="signup-password-label">
+                        <label>Password: </label>
+                        <input type="password" id="signup-password">
+                    </div>
+                    <button id="signup-btn">Sign Up</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="mapPage">
+                <label>Quick Links</label>
+                <li go="serial">Series and Movies</li>
+                <li go="quotes">Quotes</li>
+            </div>
+            <div class="aboutUs">
+                <label>About Us</label>
+                <li go="develop">Development</li>
+                <li go="contact">Contact Us</li>
+            </div>
+            <div class="information">
+                <label>Information</label>
+                <li go="api">Our API</li>
+                <li go="use">How to use our webpage</li>
+            </div>
+            <script src="./js/login.js"></script>
+        </footer>
+    </body>
+</html>
