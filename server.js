@@ -254,35 +254,41 @@ app.post( '/user', jsonParser, (req,res)=>{
 
     let username = req.body.username;
     let password = req.body.password;
-    
+
     if ( !username || !password ){
         res.statusMessage = "One of the parameters is missing.";
         return res.status(406).end();
     }
 
     if( password==username || username.length<5 || password.length<5 ){
-        res.statusMessage = "The information inserted is invalid, check that your password and username are diferent and longer than 5 caracters.";
+        res.statusMessage = "The information inserted is invalid, check that your password and username are diferent and longer than 5 characters.";
         return res.status(406).end();
     }
 
-    bcrypt.hash(password,11).then( hashedPassword => {
-        let newUser = {username, password: hashedPassword};
-        Users.createUser(newUser).then( result => {
-            let userData = {};
-            userData.id = result._id;
-            userData.username = result.username;
-            userData.wish = result.wish;
-            userData.watch = result.watch;
-            userData.like = result.like;
-            userData.admin = result.admin;
-            
-            return jsonwebtoken.sign( userData, SECRET_TOKEN, {expiresIn: '30h'}, (err, token) => {
-                if(err){
-                    res.statusMessage = err.message;
-                    return res.status(409).end();
-                }
-                return res.status(201).json( token );
-            });
+    Users.getUserBy({username}).then( result => {
+        if(result[0]){
+            res.statusMessage = "This username already exists.";
+            return res.status(406).end();
+        }
+        bcrypt.hash(password,11).then( hashedPassword => {
+            let newUser = {username, password: hashedPassword};
+            Users.createUser(newUser).then( result => {
+                let userData = {};
+                userData.id = result._id;
+                userData.username = result.username;
+                userData.wish = result.wish;
+                userData.watch = result.watch;
+                userData.like = result.like;
+                userData.admin = result.admin;
+                
+                return jsonwebtoken.sign( userData, SECRET_TOKEN, {expiresIn: '30h'}, (err, token) => {
+                    if(err){
+                        res.statusMessage = err.message;
+                        return res.status(409).end();
+                    }
+                    return res.status(201).json( token );
+                });
+            }).catch( err => {res.statusMessage = "Something went wrong with the Database";return res.status(500).end();});
         }).catch( err => {res.statusMessage = "Something went wrong with the Database";return res.status(500).end();});
     }).catch( err => {res.statusMessage = "Something went wrong with the Database";return res.status(500).end();});
 });

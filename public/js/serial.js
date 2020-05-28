@@ -37,7 +37,7 @@ function addTV(place,arrey){
 
 function addInfoTv(place,object){
     //unique
-    delay = 2000;
+    delay = 500;
     if(!object[0]){
         place.innerHTML = '<img id="e404" src="https://cdn.pixabay.com/photo/2018/01/04/15/51/error-3060993_960_720.png"> This webpage does not exists you will be redirected to Home. </img>';
         setTimeout(function(){
