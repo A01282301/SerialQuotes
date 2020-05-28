@@ -647,11 +647,10 @@ function watchShowAdminBtns(){
             editTv.style.display = "flex";
 
             editTv.id = tv.id;
-            console.log(tv);
             editTv.querySelector('#edit-title').value = tv.querySelector('.show-title').innerHTML;
             editTv.querySelector('#edit-type').value = tv.querySelector('.show-type').innerHTML;
             editTv.querySelector('#edit-description').value = tv.querySelector('.show-description').innerHTML.trim();
-            editTv.querySelector('#edit-image').value = tv.querySelector('.image').src;
+            editTv.querySelector('#edit-image').value = tv.querySelector('img').src;
         } else if(event.target.id == "delete-TV"){
             let tv = event.target.parentNode.parentNode.id;
             fetchDeleteElement(`tv/${tv}`,{});
