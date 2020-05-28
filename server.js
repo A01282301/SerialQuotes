@@ -254,14 +254,14 @@ app.post( '/user', jsonParser, (req,res)=>{
 
     let username = req.body.username;
     let password = req.body.password;
-
+    
     if ( !username || !password ){
         res.statusMessage = "One of the parameters is missing.";
         return res.status(406).end();
     }
 
     if( password==username || username.length<5 || password.length<5 ){
-        res.statusMessage = "The information inserted is invalid, check that your password and username are diferente and longer than 5 caracters.";
+        res.statusMessage = "The information inserted is invalid, check that your password and username are diferent and longer than 5 caracters.";
         return res.status(406).end();
     }
 
@@ -301,7 +301,7 @@ app.post( '/tv', jsonParser, (req,res)=>{
         return res.status(406).end();
     }
 
-    if ( title=="" || (type!="Serie" && type!="Movie") || description=="" || image=="" ){
+    if ( title=="" || (type!="Series" && type!="Movie") || description=="" || image=="" ){
         res.statusMessage = "The information is wrong.";
         return res.status(406).end();
     }
