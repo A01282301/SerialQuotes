@@ -216,7 +216,7 @@ function loadingPage(){
     let moviesQuotes = document.querySelector('.movies-quotes');
     fetchBy('quote?type=Movie',moviesQuotes,addQuotes);
     let seriesQuotes = document.querySelector('.serial-quotes');
-    fetchBy('quote?type=Serie',seriesQuotes,addQuotes);
+    fetchBy('quote?type=Series',seriesQuotes,addQuotes);
     let randomQuotes = document.querySelector('.random-quotes');
     fetchBy('random',randomQuotes,addQuote);
 }
