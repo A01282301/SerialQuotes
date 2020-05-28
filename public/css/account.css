@@ -226,9 +226,15 @@ li:hover{
     border-radius: 10px;
 }
 
+#Coffe{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+
 @media (max-width: 700px) {
     .create-tv{
         width: 70%;
     }
-
 }

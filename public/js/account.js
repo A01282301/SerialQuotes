@@ -245,11 +245,18 @@ function watchAdminBtn(){
     
     btn.addEventListener( 'click',(event)=>{
         event.preventDefault();
+        let delay = 2000;
         let data = {};
         data.id = user.id;
         data.admin = false;
-        fetchUpdate(data);
+        file=document.querySelector('.results')
+        file.innerHTML += `<img id="Coffe" src = "https://i.giphy.com/media/3oEjHKzWpGjZb15XIA/giphy.webp"> <b> Oh no! You spilled coffe on the server again... </b> </img>`
+        setTimeout(function(){
+        fetchUpdate(data); 
+        },delay);
     });
+    
+    
 }
 
 function watchBtn(place,element,page,next){
